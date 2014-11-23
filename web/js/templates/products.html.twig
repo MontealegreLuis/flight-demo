@@ -1,0 +1,4 @@
+<option value="">Choose a product</option>
+{% for product in products %}
+    <option value="{{ product.productId }}">{{ product.name }}</option>
+{% endfor %}

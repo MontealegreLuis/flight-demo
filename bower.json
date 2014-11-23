@@ -1,0 +1,11 @@
+{
+  "name": "Flight JS demo application",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery": "2.x.x",
+    "flight": "1.x.x",
+    "requirejs": "~2.1.5",
+    "components-bootstrap": "3.x.x",
+    "twig.js": "~0.7.2"
+  }
+}

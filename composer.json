@@ -1,0 +1,15 @@
+{
+    "name": "montealegreluis/flight",
+    "description": "Flight JS demo application",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luis Montealegre",
+            "email": "montealegreluis@gmail.com"
+        }
+    ],
+    "require": {
+        "fzaninotto/faker": "~1.4",
+        "slim/slim": "~2.4"
+    }
+}

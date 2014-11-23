@@ -1,0 +1,6 @@
+<tr>
+    <td>{{ item.productName() }}</td>
+    <td>$ {{ item.unitPrice()|number_format(2, '.', ',') }}</td>
+    <td>{{ item.quantity() }}</td>
+    <td>$ {{ item.total()|number_format(2, '.', ',') }}</td>
+</tr>
