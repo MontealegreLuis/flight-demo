@@ -6,7 +6,7 @@ define(function (require) {
     var view = require('twig');
 
     /* Components */
-    var DataOrderItem = require('component/DataOrderItem');
+    var DataShoppingCart = require('component/DataShoppingCart');
     var UiOrderItem = require('component/UiOrderItem');
     var UiShoppingCart = require('component/UiShoppingCart');
 
@@ -14,7 +14,7 @@ define(function (require) {
     var ShoppingCart = require('store/ShoppingCart');
     var ProductsCatalog = require('store/ProductsCatalog');
 
-    var Page = function() {
+    var ShoppingCartPage = function() {
 
         /**
          * Module's initialization method
@@ -27,7 +27,7 @@ define(function (require) {
             view.twig({href: '/js/templates/item.html.twig', async: false, id: 'item'});
             view.twig({href: '/js/templates/cart-total.html.twig', async: false, id: 'total'});
 
-            catalog.load({xhr: $, url: '/products'});
+            catalog.load({request: $, url: '/products'});
 
             /* UI components */
             UiShoppingCart.attachTo('#items-table', {
@@ -43,7 +43,7 @@ define(function (require) {
             });
 
             /* Data components */
-            DataOrderItem.attachTo(document, {
+            DataShoppingCart.attachTo(document, {
                 catalog: catalog,
                 cart: cart
             });
@@ -53,5 +53,5 @@ define(function (require) {
     /**
      * Module exports
      */
-    return Page;
+    return ShoppingCartPage;
 });

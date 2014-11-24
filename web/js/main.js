@@ -19,8 +19,8 @@ require([
     function (compose, registry, advice) {
         compose.mixin(registry, [advice.withAdvice]);
 
-        require(['page/default'], function (Page) {
-            var page = new Page();
+        require(['page/ShoppingCartPage'], function (ShoppingCartPage) {
+            var page = new ShoppingCartPage();
 
             page.init();
         });

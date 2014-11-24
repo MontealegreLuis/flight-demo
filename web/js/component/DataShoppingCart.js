@@ -5,7 +5,7 @@ define(['../vendor/flight/lib/component'], function(defineComponent) {
      *
      * @constructor
      */
-    var DataOrderItem = function() {
+    var DataShoppingCart = function() {
         'use strict';
 
         this.attributes({
@@ -40,6 +40,5 @@ define(['../vendor/flight/lib/component'], function(defineComponent) {
         });
     };
 
-    return defineComponent(DataOrderItem);
+    return defineComponent(DataShoppingCart);
 });
-

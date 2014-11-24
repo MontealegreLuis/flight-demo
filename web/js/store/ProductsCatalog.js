@@ -19,7 +19,7 @@ define(function() {
         this.load = function(options) {
             var productsLoaded = options.callback || this.setProducts;
 
-            options.xhr.ajax({
+            options.request.ajax({
                 url: options.url,
                 dataType: 'json',
                 async: false,
