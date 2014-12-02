@@ -5,6 +5,7 @@ requirejs.config({
     paths: {
         'jquery': 'vendor/jquery/dist/jquery.min',
         'twig': 'vendor/twig.js/twig.min',
+        'flight': 'vendor/flight',
         'component': '/js/src/component',
         'page': '/js/src/page',
         'store': '/js/src/store'
@@ -12,9 +13,9 @@ requirejs.config({
 });
 
 require([
-        'vendor/flight/lib/compose',
-        'vendor/flight/lib/registry',
-        'vendor/flight/lib/advice',
+        'flight/lib/compose',
+        'flight/lib/registry',
+        'flight/lib/advice',
     ],
     function (compose, registry, advice) {
         compose.mixin(registry, [advice.withAdvice]);

@@ -1,4 +1,4 @@
-define(['../../vendor/flight/lib/component'], function(defineComponent) {
+define(['flight/lib/component'], function(defineComponent) {
 
     /**
      * This data component takes information from the product catalog and updates the items in the shopping cart

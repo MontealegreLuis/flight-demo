@@ -1,4 +1,4 @@
-define(['../../vendor/flight/lib/component'], function(defineComponent) {
+define(['flight/lib/component'], function(defineComponent) {
 
     /**
      * This UI component updates the DOM when products are added or removed from the shopping cart.
