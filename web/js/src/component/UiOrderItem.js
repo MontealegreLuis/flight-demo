@@ -1,4 +1,4 @@
-define(['../vendor/flight/lib/component'], function(defineComponent) {
+define(['../../vendor/flight/lib/component'], function(defineComponent) {
 
     /**
      * This UI component handles the actions to add a new product item to a shopping cart

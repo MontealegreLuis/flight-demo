@@ -5,9 +5,9 @@ requirejs.config({
     paths: {
         'jquery': 'vendor/jquery/dist/jquery.min',
         'twig': 'vendor/twig.js/twig.min',
-        'component': '/js/component',
-        'page': '/js/page',
-        'store': '/js/store'
+        'component': '/js/src/component',
+        'page': '/js/src/page',
+        'store': '/js/src/store'
     }
 });
 

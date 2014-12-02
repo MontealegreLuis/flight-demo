@@ -23,9 +23,9 @@ define(function (require) {
             var catalog = new ProductsCatalog();
             var cart = new ShoppingCart();
 
-            view.twig({href: '/js/templates/products.html.twig', async: false, id: 'products'});
-            view.twig({href: '/js/templates/item.html.twig', async: false, id: 'item'});
-            view.twig({href: '/js/templates/cart-total.html.twig', async: false, id: 'total'});
+            view.twig({href: '/js/src/templates/products.html.twig', async: false, id: 'products'});
+            view.twig({href: '/js/src/templates/item.html.twig', async: false, id: 'item'});
+            view.twig({href: '/js/src/templates/cart-total.html.twig', async: false, id: 'total'});
 
             catalog.load({request: $, url: '/products'});
 
