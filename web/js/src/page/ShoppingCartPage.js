@@ -1,7 +1,7 @@
 define(function (require) {
     'use strict';
 
-    /* third party dependencies */
+    /* Third party dependencies */
     var $ = require('jquery');
     var view = require('twig');
 
@@ -31,7 +31,7 @@ define(function (require) {
 
             /* UI components */
             UiShoppingCart.attachTo('#items-table', {
-                tableBodySelector: 'tbody',
+                cartItemsSelector: 'tbody',
                 totalSelector: '#cart-total',
                 itemTemplate: view.twig({ref: 'item'}),
                 totalTemplate: view.twig({ref: 'total'})
