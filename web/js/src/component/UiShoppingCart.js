@@ -10,7 +10,7 @@ define(['flight/lib/component'], function(defineComponent) {
 
         this.attributes({
             totalSelector: null,
-            tableBodySelector: null,
+            cartItemsSelector: null,
             itemTemplate: null,
             totalTemplate: null
         });
@@ -22,7 +22,7 @@ define(['flight/lib/component'], function(defineComponent) {
          * @param {Object} data
          */
         this.appendProduct = function (event, data) {
-            this.select('tableBodySelector').append(this.attr.itemTemplate.render({item: data.item}));
+            this.select('cartItemsSelector').append(this.attr.itemTemplate.render({item: data.item}));
         }
 
         /**
