@@ -29,12 +29,4 @@ describeComponent('component/UiOrderItem', function () {
 
         expect('ui.whenProductIsAdded').toHaveBeenTriggeredOn(this.$node);
     });
-/*
-    it("should trigger 'data.whenProductsAreLoaded' event when method 'loadProducts' is executed", function () {
-        spyOnEvent(this.$node, 'data.whenProductsAreLoaded');
-
-        this.component.loadProducts({});
-
-        expect('data.whenProductsAreLoaded').toHaveBeenTriggeredOn(this.$node);
-    });*/
 });

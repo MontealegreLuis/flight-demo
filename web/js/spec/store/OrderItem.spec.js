@@ -17,6 +17,7 @@ define(['store/OrderItem'], function(OrderItem) {
                 [{product: {unitPrice: 1500}, quantity: 5, toString: toString}, {total: 7500, toString: totalToString}]
             ],
             function(item, expected) {
+
                 it('should calculate an item total price', function () {
                     var cartItem = new OrderItem(item.product, item.quantity);
 
