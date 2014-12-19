@@ -1,4 +1,6 @@
-*.log
-vendor/
+bin/
 node_modules/
+tests/_output/*
+var/
+vendor/
 web/js/vendor

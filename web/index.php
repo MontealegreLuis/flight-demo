@@ -1,27 +1,20 @@
 <?php
-require '../vendor/autoload.php';
+/**
+ * PHP version 5.5
+ *
+ * This source file is subject to the license that is bundled with this package in the file LICENSE.
+ */
+chdir(__DIR__ . '/../');
 
-use Faker\Factory;
-use Slim\Slim;
+require 'vendor/autoload.php';
+require 'app/config.php';
 
-$app = new Slim();
+$app = new \Slim\Slim($configuration['app']);
 
-$app->get('/products', function() use ($app) {
-    $faker = Factory::create();
-    $count = $faker->randomNumber(2) % 15; // Random number between 0 an 15
-    $productsCount =  $count !== 0 ? $count : 5; // If $count is 0 use 5 as default
-    $products = [];
+$view = $app->view();
+$view->parserOptions = $configuration['twig'];
 
-    for ($i = 0; $i < $productsCount; $i++) {
-        $products[] = [
-            'productId' => $faker->uuid,
-            'name' => $faker->sentence(2),
-            'unitPrice' => $faker->randomFloat(2, 0, 5000),
-        ];
-    }
-
-    echo json_encode($products, JSON_PRETTY_PRINT);
-
-});
+require 'app/resources.php';
+require 'app/routes.php';
 
 $app->run();

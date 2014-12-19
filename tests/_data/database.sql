@@ -1,0 +1,12 @@
+PRAGMA foreign_keys=OFF;
+
+BEGIN TRANSACTION;
+
+CREATE TABLE products (
+  product_id INTEGER NOT NULL,
+  name VARCHAR(100) NOT NULL,
+  unit_price DOUBLE PRECISION NOT NULL,
+  PRIMARY KEY(product_id)
+);
+
+COMMIT;

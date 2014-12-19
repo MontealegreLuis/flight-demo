@@ -29,6 +29,7 @@ global.requirejs = requirejs;
 // Setup the DOM
 global.window = jsdom.jsdom().parentWindow
 global.document = global.window.document;
+global.location = global.window.location;
 
 // Setup jQuery
 jQuery = require('jquery');

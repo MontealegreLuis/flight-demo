@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "devDependencies": {
     "Faker": "^0.7.2",
+    "grunt": "~0.4",
+    "grunt-exec": "~0.4",
+    "grunt-run": "~0.3",
     "jasmine-flight": "https://github.com/MontealegreLuis/jasmine-flight/archive/no_browser.tar.gz",
     "jasmine-jquery": "https://github.com/velesin/jasmine-jquery/archive/2.0.5.tar.gz",
     "jasmine-node": "^2.0.0-beta4",
     "jquery": "^2.1.1",
     "jsdom": "^1.3.1",
+    "phantomjs": "~1.9",
     "requirejs": "~2.1.11"
   },
   "scripts": {

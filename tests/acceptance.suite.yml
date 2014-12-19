@@ -1,0 +1,12 @@
+class_name: AcceptanceTester
+modules:
+    enabled:
+        - WebDriver
+        - AcceptanceHelper
+    config:
+        WebDriver:
+            url: 'http://shoppingcart.dev/'
+            browser: phantomjs
+            wait: 5
+            capabilities:
+                javascriptEnabled: true
