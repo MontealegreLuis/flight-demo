@@ -1,18 +1,16 @@
-define(function (require) {
-    'use strict';
-
+define([
     /* Third party dependencies */
-    var $ = require('jquery');
-    var view = require('twig');
-
+    'jquery',
+    'twig',
     /* Components */
-    var DataShoppingCart = require('component/DataShoppingCart');
-    var UiOrderItem = require('component/UiOrderItem');
-    var UiShoppingCart = require('component/UiShoppingCart');
-
+    'component/DataShoppingCart',
+    'component/UiOrderItem',
+    'component/UiShoppingCart',
     /** Application modules */
-    var ShoppingCart = require('store/ShoppingCart');
-    var ProductsCatalog = require('store/ProductsCatalog');
+    'store/ShoppingCart',
+    'store/ProductsCatalog'
+], function ($, view, DataShoppingCart, UiOrderItem, UiShoppingCart, ShoppingCart, ProductsCatalog) {
+    'use strict';
 
     var ShoppingCartPage = function() {
 

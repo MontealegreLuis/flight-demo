@@ -8,8 +8,20 @@
             "email": "montealegreluis@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-0": {"Store\\": "src/"}
+    },
+    "config": {
+        "bin-dir": "bin/"
+    },
     "require": {
-        "fzaninotto/faker": "~1.4",
-        "slim/slim": "~2.4"
+        "slim/slim": "~2.4",
+        "slim/views": "~0.1",
+        "twig/twig": "~1.16"
+    },
+    "require-dev": {
+        "codeception/codeception": "~2.0",
+        "nelmio/alice": "~1.7",
+        "phing/phing": "~2.9"
     }
 }

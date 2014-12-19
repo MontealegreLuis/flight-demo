@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="flight" description="Flight demo application" default="app:config:dev">
+
+    <target name="-config" description="Build configuration files" hidden="true">
+        <echo msg="Building configuration file..." />
+        <copy file="${project.basedir}/app/config.php.dist"
+              tofile="${project.basedir}/app/config.php"
+              overwrite="true">
+            <filterchain>
+                <replacetokens begintoken="##" endtoken="##">
+                    <token key="app.env" value="${app.environment}" />
+                </replacetokens>
+            </filterchain>
+        </copy>
+    </target>
+
+    <target name="app:config:test" description="Build configuration for the testing environment">
+        <phingcall target="-config">
+            <property name="app.environment" value="'test'" />
+        </phingcall>
+    </target>
+
+    <target name="app:config:dev" description="Build configuration for the development environment">
+        <phingcall target="-config">
+            <property name="app.environment" value="'development'" />
+        </phingcall>
+    </target>
+
+    <target name="tests:all"
+        depends="tests:javascript,tests:acceptance"
+        description="Run all the tests">
+    </target>
+
+    <target name="tests:acceptance" description="Run all the acceptance tests" depends="app:config:test">
+        <echo msg="Running acceptance tests" />
+        <exec passthru="true" checkreturn="true" command="grunt test" />
+    </target>
+
+    <target name="tests:javascript" description="Run all the JavaScript tests">
+        <echo msg="Running JavaScript tests" />
+        <exec passthru="true" checkreturn="true" command="npm test" />
+    </target>
+
+</project>

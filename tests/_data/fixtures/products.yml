@@ -1,0 +1,16 @@
+Store\Product:
+    product0:
+        __construct: false
+        productId: 1
+        name: Tetris
+        unitPrice: 100.21
+    product1:
+        __construct: false
+        productId: 2
+        name: Minecraft
+        unitPrice: 200.83
+    product{2..12}:
+        __construct: false
+        productId (unique): <numberBetween(3, 20)>
+        name (unique): <product()>
+        unitPrice: <randomFloat(2, 5, 100)>
