@@ -1,3 +1,4 @@
+app/config.php
 bin/
 node_modules/
 tests/_output/*

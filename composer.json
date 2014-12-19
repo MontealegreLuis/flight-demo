@@ -21,6 +21,7 @@
     },
     "require-dev": {
         "codeception/codeception": "~2.0",
-        "nelmio/alice": "~1.7"
+        "nelmio/alice": "~1.7",
+        "phing/phing": "~2.9"
     }
 }
